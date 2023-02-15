@@ -30,7 +30,7 @@ We recommend creating an isolated Conda environment to run our pipeline, which c
 
 </br>
 
-In addition to python and conda, the list of requirements can be found in the requirements.txt file in the env directory. These include:
+In addition to python and conda, the list of requirements can be found in the requirements.txt file in the main directory. These include:
 
 
 - numpy 1.23.5
