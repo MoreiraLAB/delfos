@@ -59,9 +59,9 @@ pip install -r requirements.txt
 
 Zip files containing original data used in the development of DELFOS are also available here:
 
-- [original_data.zip](link_github) includes the original CCLE files used in our study. These can also be directly downloaded from the [DepMap website](https://depmap.org/portal/download/all/).
+- [original_data.zip](https://github.com/MoreiraLAB/delfos/blob/main/data/original/original_data.zip) includes the original CCLE files used in our study. These can also be directly downloaded from the [DepMap website](https://depmap.org/portal/download/all/).
 
-- [sc_data.zip](link_github) includes the original scRNA-seq data from different studies:
+- [sc_data.zip](https://github.com/MoreiraLAB/delfos/blob/main/data/single-cell/sc_integration/sc_data.zip) includes the original scRNA-seq data from different studies:
 
 |       Author       |                                 Identifier                                 | Cancer type | Platform |
 | :----------------: | :------------------------------------------------------------------------: | :---------: | :------: |
