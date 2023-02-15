@@ -8,7 +8,7 @@
 
 <p align="center">
 </br>
-<img src="gabstract.png" alt="drawing" width="977" height ="418"/>
+<img src="gabstract.png" alt="drawing" width="977" height ="400"/>
 </p>
 </br>
 
