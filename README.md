@@ -65,11 +65,11 @@ Zip files containing original data used in the development of DELFOS are also av
 
 |       Author       |                                 Identifier                                 | Cancer type | Platform |
 | :----------------: | :------------------------------------------------------------------------: | :---------: | :------: |
-| Sriramkumar et al. |                                 GSE207993                                  |   Ovarian   | Chromium |
+| Sriramkumar et al. | [GSE207993](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE207993)  |   Ovarian   | Chromium |
 |  McFarland et al.  | [figshare.com/s/139f64b495dea9d88c70](figshare.com/s/139f64b495dea9d88c70) |   Several   | MIX-Seq  |
-|   Schnepp et al.   |                                 GSE140440                                  |  Prostate   |    C1    |
-|  Kagohara et al.   |                                 GSE137524                                  |    HNSCC    | Chromium |
-|  Ben-David et al.  |                                 GSE114462                                  |   Breast    | Chromium |
+|   Schnepp et al.   | [GSE140440](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140440)  |  Prostate   |    C1    |
+|  Kagohara et al.   | [GSE137524](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137524)  |    HNSCC    | Chromium |
+|  Ben-David et al.  | [GSE114462](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114462)  |   Breast    | Chromium |
 
 </br>
 
