@@ -17,12 +17,13 @@
 
 DELFOS was developed and tested as follows.
 ```
-Python 3.9.13 | packaged by conda-forge | (main, May 27 2022, 16:58:50) [GCC 10.3.0] on linux ::
+Python v3.9.13 | packaged by conda-forge | (main, May 27 2022, 16:58:50) [GCC 10.3.0] on linux ::
+R v4.2.2 (2022-10-31) -- "Innocent and Trusting" | Copyright (C) 2022 The R Foundation for Statistical Computing | Platform: x86_64-conda-linux-gnu (64-bit)
 conda v4.6.11
 ```
 We recommend creating an isolated Conda environment to run our pipeline, which can be performed using the following code:
 ```
-1. conda create --name delfos python=3.9
+1. conda create --name delfos python=3.9 R=4.2
 2. conda activate delfos
 ```
 
@@ -30,7 +31,7 @@ We recommend creating an isolated Conda environment to run our pipeline, which c
 
 </br>
 
-In addition to Python and Conda, the list of requirements can be found in the requirements.txt file in the main directory. These include:
+In addition to Python, R and Conda, the list of requirements for Python scritps can be found in the requirements.txt file in the main directory. These include:
 
 
 - numpy 1.23.5
@@ -45,15 +46,29 @@ In addition to Python and Conda, the list of requirements can be found in the re
 - scipy 1.9.3
 - scikit-learn 1.2.0
 - pubchempy 1.0.4
-- xgboost 1.7.2
+- xgboost 1.7.2 
 </br>
 
-Some requirements are still not supported by conda-forge, and can be installed using **pip**. To install all requirements and dependencies, the following command should be executed:
+These requirements can be installed using **pip**. To install all requirements and dependencies, the following command should be executed:
 
 ```
 pip install -r requirements.txt
 ```
 </br>
+
+As for the R script, requirements include:
+- r-dplyr 1.0.10
+- r-tidyr 1.2.1
+- r-matrix 1.5_3
+- r-patchwork 1.1.2
+- r-seurat 4.2.1
+</br>
+
+These requirements can be installed using **conda**, with the following commands:
+
+```
+conda install -c conda-forge r-dplyr=1.0.10 r-tidyr=1.2.1 r-matrix=1.5_3 r-patchwork=1.1.2 r-seurat=4.2.1
+```
 
 ### **Data download**
 
@@ -106,7 +121,9 @@ DELFOS
 │   |   │   |   individual_valid
 │   │   single-cell
 │   |   │   individual
-│   |   │   prep
+│   |   └───prep
+│   |   |   |   Annotation.txt
+│   |   |   |   classifications.csv
 │   |   └───sc_integration
 │   |   |   |   BenDavid
 │   |   |   |   Kagohara

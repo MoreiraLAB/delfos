@@ -3,12 +3,13 @@ library(Seurat)
 library(patchwork)
 library(Matrix)
 library(tidyr)
+library(reticulate)
 
-setwd("/storage/agomes/lpiochi_temp/Github/data/single-cell/sc_integration/")
-DEFAULT_LOCATION <- "/storage/agomes/lpiochi_temp/Github/"
+reticulate::source_python('delfos_resources.py')
+setwd(paste(DEFAULT_LOCATION, "data/single-cell/sc_integration/", sep = ""))
 
 "
-Each dataset was first called and processed into a Seurat object. The resulting objects were then integrated and processed according to Seurat's
+Each dataset is first called and processed into a Seurat object. The resulting objects are then integrated and processed according to Seurat's
 introductory vignette.
 
 "
@@ -17,7 +18,7 @@ introductory vignette.
 anno <- read.csv("hGENES.csv", header = T)
 
 # KAGOHARA_SCC1
-kag <- read.csv("Kagohara/GSE137524_exprsSCC1Matrix.csv")
+kag <- read.csv("Kagohara/SCC1Matrix.csv")
 kag <- kag[kag[,1] %in% anno[, 1], ]
 kag <- kag[!duplicated(kag[, 1]),]
 rownames(kag) <- kag[, 1]
@@ -26,7 +27,7 @@ kag <- kag[ , grepl( "PBS" , colnames(kag))]
 kagohara1 <- CreateSeuratObject(counts = kag, min.cells = 0, assay = "RNA", project = "Kagohara", min.features = 100)
 
 # KAGOHARA_SCC25
-kag <- read.csv("Kagohara/GSE137524_exprsSCC25Matrix.csv")
+kag <- read.csv("Kagohara/SCC25Matrix.csv")
 kag <- kag[kag[,1] %in% anno[, 1], ]
 kag <- kag[!duplicated(kag[, 1]),]
 rownames(kag) <- kag[, 1]
@@ -83,10 +84,10 @@ data_s <- ScaleData(data_s, vars.to.regress = c("S.Score", "G2M.Score"))
 
 datas <- as.data.frame(t(data_s@assays$integrated@scale.data))
 
-write.csv(datas, DEFAULT_LOCATION + "/data/single-cell/integrated_sc.csv", row.names = T)
+write.csv(datas, paste(DEFAULT_LOCATION, "data/single-cell/integrated_sc.csv", sep = ""), row.names = T)
 
 # If you with to save the RDS file of the integrated Seurat object, untoggle the comment below:
-# saveRDS(data_s, file = DEFAULT_LOCATION + "integrated_sc.rds")
+# saveRDS(data_s, file = paste(DEFAULT_LOCATION, "data/single-cell/sc_integration/integrated_sc.rds", sep = ""))
 
 
 

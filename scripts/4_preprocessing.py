@@ -118,11 +118,11 @@ def preprocessing(feature, feature_name,
 feature_dict = {
     "mordred" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/mordred_feat.h5"),
     "drugtax" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/drugtax_feat.h5"),
-    "chromatin" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE/CCLE_chromatin.h5"),
-    "copynumber" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE/CCLE_copynumber.h5"),
-    "expression" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE/CCLE_expression.h5"),
-    "methylation" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE/CCLE_methylation.h5"),
-    "mirna" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE/CCLE_miRNA.h5")
+    "chromatin" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE_chromatin.h5"),
+    "copynumber" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE_copynumber.h5"),
+    "expression" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE_expression.h5"),
+    "methylation" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE_methylation.h5"),
+    "mirna" : pd.read_hdf(DEFAULT_LOCATION + "data/h5/CCLE_mirna.h5")
 }
 
 for key in feature_dict:

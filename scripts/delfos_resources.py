@@ -7,7 +7,7 @@ __group_leader__ = "Irina S. Moreira"
 __project__ = "DELFOS"
 
 # Change this variable to your root directory
-DEFAULT_LOCATION = "/storage/agomes/lpiochi_temp/Github/"
+DEFAULT_LOCATION = "/path/to/root/"
 
 
 TRAIN_SPLIT = DEFAULT_LOCATION + "data/splits/train_features.csv"

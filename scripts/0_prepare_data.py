@@ -78,7 +78,7 @@ def generate_CCLE(ccle_input, omics_type):
         ccle = ccle.merge(cells, on = "CELL_LINE_NAME")
         ccle = ccle.drop_duplicates()
         ccle = ccle.drop("DepMap_ID", axis = 1)
-    ccle.to_hdf(DEFAULT_LOCATION + "/data/h5/CCLE/CCLE_" + omics_type + ".h5", "w", index = False)
+    ccle.to_hdf(DEFAULT_LOCATION + "/data/h5/CCLE_" + omics_type + ".h5", "w", index = False)
 
 ccle_original = {
     "chromatin" : ORIGINAL_DATA_LOC + "CCLE/CCLE_chromatin.csv",
