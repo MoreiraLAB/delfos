@@ -83,7 +83,7 @@ data_s <- ScaleData(data_s)
 
 datas <- as.data.frame(t(data_s@assays$RNA@scale.data))
 
-write.csv(datas, paste(DEFAULT_LOCATION, "data/single-cell/integrated_sc.csv", sep = ""), row.names = T)
+write.csv(datas, paste(DEFAULT_LOCATION, "data/single-cell/merged_sc.csv", sep = ""), row.names = T)
 
 # If you with to save the RDS file of the integrated Seurat object, untoggle the comment below:
 # saveRDS(data_s, file = paste(DEFAULT_LOCATION, "data/single-cell/sc_integration/integrated_sc.rds", sep = ""))
