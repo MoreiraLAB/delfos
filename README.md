@@ -160,4 +160,4 @@ After performing the changes previously indicated and properly installing and se
 
 Luiz Felipe Piochi, António J. Preto, and Irina S. Moreira
 
-[*Piochi L.F., Preto, A.J., Moreira, I.S. - DELFOS: multi-omics-based prediction of cancer drug sensitivity with scRNA-seq data*] PENDING CITATION
+Luiz Felipe Piochi, António J Preto, Irina S Moreira, DELFOS—drug efficacy leveraging forked and specialized networks—benchmarking scRNA-seq data in multi-omics-based prediction of cancer sensitivity, Bioinformatics, Volume 39, Issue 11, November 2023, btad645, https://doi.org/10.1093/bioinformatics/btad645
